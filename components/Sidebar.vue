@@ -34,6 +34,11 @@
       <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/433826abc6374b059215ac0c8769872c~tplv-k3u1fbpfcp-watermark.image" alt="公益广告">
     </div>
 
+    <!-- 备案号 -->
+    <el-footer class="main zg-footer global-bgcolor global-title-color">
+      <p>© 2021 lucas.zhou, Inc</p>
+      <p>京ICP备15031610号-16</p>
+    </el-footer>
 
 
   </div>

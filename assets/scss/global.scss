@@ -52,14 +52,14 @@ $light-title-color: #2e3135;
 $light-desc-color: #586069;
 $light-default-color: #ffffff;
 $light-link-hover-color:#007fff;
-$light-border-color:rgba(178,186,194,.4);
+$light-border-color:rgba(171, 172, 173, 0.4);
 $light-icon-color:rgba(178,186,194,.8);
 
 // 暗色
 $dark-bgcolor:#0d1117;
 $dark-title-color: rgb(201, 209, 217);
 $dark-desc-color: darkgray;
-$dark-default-color:#0c0c10;
+$dark-default-color:#000000;
 $dark-link-hover-color: rgba(201, 209, 217, .8);
 $dark-border-color:#30363d;
 
@@ -135,6 +135,13 @@ $dark-border-color:#30363d;
 
 
 // 全局样式
+.zg-logo{
+    width: 36px;
+    height: 36px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+}
 .zg-header{
     height: 42px !important;
     ul{
@@ -151,19 +158,26 @@ $dark-border-color:#30363d;
         }
         li{
             font-size: 14px;
-            margin-right: 20px;
+            margin-right: 15px;
             cursor: pointer;
         }
     }
 }
 .zg-footer{
-    height: 32px !important;
-    line-height: 32px;
+    // height: 32px !important;
+    // line-height: 32px;
+    height: auto !important;
     font-size: 12px;
     text-align: center;
+    p{
+        padding: 0;
+        margin: auto;
+        text-align: left;
+        line-height: 20px;
+    }
 }
 .zg-main{
-    height: calc(100vh - 74px);
+    // min-height: calc(100vh - 74px);
 }
 .zg-container{
     width: 960px;
@@ -171,14 +185,19 @@ $dark-border-color:#30363d;
 }
 .zg-content{
     display: flex;
-    height: 100%;
+    // min-height: 100%;
     justify-content: space-between;
     .zg-left-content{
         flex: 0 auto;
         width: 700px;
-        min-height: 100%;
+        height: calc(100vh - 82px);
         border-radius: 4px;
         overflow-y: auto;
+        scrollbar-width: none; /* firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+        &::-webkit-scrollbar {
+            display: none; /* Chrome Safari */
+        }
         .context-box{
             display: flex;
             align-items: center;
@@ -224,6 +243,12 @@ $dark-border-color:#30363d;
                 height: 60px;
                 border-radius: 2px;
             }
+        }
+        // 详情页面的内容
+        .zg-details-content{
+            padding: 18px 24px;
+            font-weight: 400;
+            font-size: 14px;
         }
     }
     .zg-right-content{

@@ -30,9 +30,13 @@ export default {
     {
       src: '~plugins/element-ui',
       ssr: true,
-    }    
+    },
+    '~plugins/mock',
+    '~plugins/axios'
   ],
-
+  env: {
+    baseUrl: process.env.BASE_URL
+  },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -42,7 +46,26 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
+  axios: {
+    proxy: true,
+    prefix: '/api', // baseURL
+    credentials: true,
+  },
+  proxy: {
+    '/api': {
+      target: 'http://127.0.0.1:7001/', // 代理地址
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': '', //将 /api 替换掉
+      },
+    },
+  },
+  loading: {
+    color: 'darkgray',
+    height: '1px'
+  },
   router: {
     base: '/',
     extendRoutes(routes, resolve) { // 路由扩展

@@ -11,7 +11,9 @@
   "dependencies": {
     "core-js": "^3.8.2",
     "element-ui": "^2.15.0",
-    "nuxt": "^2.14.12"
+    "mavon-editor": "^2.9.1",
+    "nuxt": "^2.14.12",
+    "vue-meditor": "^2.1.1"
   },
   "devDependencies": {
     "mockjs": "^1.1.0",

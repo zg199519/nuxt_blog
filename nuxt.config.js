@@ -22,7 +22,8 @@ export default {
   css: [
     'element-ui/lib/theme-chalk/index.css',
     '~assets/css/global.css',
-    {src: '~assets/scss/global.scss', lang: 'scss'}
+    {src: '~assets/scss/global.scss', lang: 'scss'},
+    { src: "mavon-editor/dist/css/index.css" },
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -32,7 +33,8 @@ export default {
       ssr: true,
     },
     '~plugins/mock',
-    '~plugins/axios'
+    '~plugins/axios',
+    { src: "~plugins/vue-markdown.js", ssr: false },
   ],
   env: {
     baseUrl: process.env.BASE_URL

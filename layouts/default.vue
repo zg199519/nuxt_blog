@@ -5,8 +5,8 @@
           <ul>
             <section class="zg-menu">
               <li class="global-title-color global-link-hover-color"> <Logo class="zg-logo"></Logo> </li>
-              <li class="global-title-color global-link-hover-color"><nuxt-link tag="a" target="_blank" :to="{path: '/', query: {code: 1}}">文章</nuxt-link></li>
-              <li class="global-title-color global-link-hover-color"><nuxt-link tag="a" target="_blank" :to="{path: '/', query: {code: 2}}">吐槽</nuxt-link></li>
+              <li class="global-title-color global-link-hover-color"><nuxt-link :to="{path: '/', query: {code: 1}}">文章</nuxt-link></li>
+              <li class="global-title-color global-link-hover-color"><nuxt-link :to="{path: '/', query: {code: 2}}">吐槽</nuxt-link></li>
               <!-- <li class="global-title-color global-link-hover-color"><nuxt-link to="/">小册</nuxt-link></li> -->
             </section>
             <li class="global-title-color">

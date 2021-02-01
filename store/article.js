@@ -41,7 +41,24 @@ export const actions = {
                 resolve()
             })
         })
-    }
+    },
+    // 上传图片
+    GET_IMG_UP({commit}, parameter) {
+        return new Promise((resolve, reject)=>{
+            service.post("/api/file/single_file_upload", parameter).then(res=>{
+                resolve(res.data)
+            })
+        })
+    },
+    // 添加文章
+    GET_ADD({commit}, parameter) {
+        return new Promise((resolve, reject)=>{
+            service.post("/api/home/addArticle", parameter).then(res=>{
+                resolve(res.data)
+            })
+        })
+    },
+
 }
 
 export const namespaced = true
